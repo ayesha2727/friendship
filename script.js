@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  function playMusic() {
+    const music = document.getElementById('background-music');
+    music.play();
+  }
+
   
   document.addEventListener("DOMContentLoaded", () => {
     const flowersContainer = document.getElementById('falling-flowers');

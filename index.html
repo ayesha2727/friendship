@@ -8,11 +8,13 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Background Music: Autoplay and Loop -->
-  <audio autoplay loop>
+  <audio id="background-music">
     <source src="music.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
+  
+  <!-- Play Button -->
+  <button onclick="playMusic()">Play Background Music</button>
 
   <div id="falling-flowers"></div>
 
