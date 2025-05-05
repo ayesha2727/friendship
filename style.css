@@ -1,0 +1,250 @@
+/* Global Styles */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f1d0d6; /* Soft light pink background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #d5006d; /* Dark pink background */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-bottom: 5px solid #e91e63; /* Lighter pink border */
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    font-family: 'Cursive', sans-serif;
+    animation: fadeIn 2s;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+/* Falling Flowers */
+#falling-flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none; /* Prevent interaction */
+    z-index: 9999;
+    overflow: hidden;
+  }
+  
+  .flower {
+    position: absolute;
+    font-size: 2em; /* Flower size */
+    opacity: 0;
+    animation: fall 10s linear infinite;
+  }
+  
+  /* Keyframes for flower falling */
+  @keyframes fall {
+    0% {
+      top: -10%;
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+  
+
+  
+  button {
+    background-color: #e91e63; /* Lighter pink for the button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 25px;
+  }
+  
+  button:hover {
+    background-color: #f06292; /* A lighter pink on hover */
+  }
+  
+  /* Heartfelt Message */
+  .message {
+    background-color: #f8bbd0; /* Soft pink background */
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .message h2 {
+    font-size: 2em;
+    color: #d5006d; /* Dark pink text */
+  }
+  
+  /* Love Letter Section */
+  .letter {
+    background-color: #fce4ec; /* Very light pink background */
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .letter h2 {
+    font-size: 2em;
+    color: #d5006d; /* Dark pink text */
+  }
+  
+  /* Celebration Section */
+  .celebration {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fce4ec; /* Very light pink background */
+  }
+  
+  .celebration h2 {
+    font-size: 2.5em;
+    color: #d5006d; /* Dark pink text */
+  }
+  
+  #celebration-animation {
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  #bomb-animation {
+    position: absolute;
+    animation: bombAnimation 3s ease-in-out infinite;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes bombAnimation {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-30px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  /* Final Message Section */
+  .final-message {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #d5006d; /* Dark pink background */
+  }
+  
+  .final-message h2 {
+    font-size: 2em;
+    color: #fff; /* White text for contrast */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    /* Adjust Hero Section */
+    .hero h1 {
+      font-size: 2.5em;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+    }
+  
+    /* Adjust Heartfelt Message Section */
+    .message h2 {
+      font-size: 1.8em;
+    }
+    .message p {
+      font-size: 1em;
+      padding: 0 15px;
+    }
+  
+    /* Adjust Love Letter Section */
+    .letter h2 {
+      font-size: 1.8em;
+    }
+    .letter p {
+      font-size: 1em;
+      padding: 0 15px;
+    }
+  
+    /* Adjust Celebration Section */
+    .celebration h2 {
+      font-size: 2em;
+    }
+  
+    /* Final Message */
+    .final-message h2 {
+      font-size: 1.8em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Adjust Hero Section */
+    .hero h1 {
+      font-size: 2em;
+    }
+    .hero p {
+      font-size: 1.1em;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  
+    /* Adjust Heartfelt Message Section */
+    .message h2 {
+      font-size: 1.6em;
+    }
+    .message p {
+      font-size: 0.9em;
+      padding: 0 10px;
+    }
+  
+    /* Adjust Love Letter Section */
+    .letter h2 {
+      font-size: 1.6em;
+    }
+    .letter p {
+      font-size: 0.9em;
+      padding: 0 10px;
+    }
+  
+    /* Adjust Celebration Section */
+    .celebration h2 {
+      font-size: 1.8em;
+    }
+  
+    /* Final Message */
+    .final-message h2 {
+      font-size: 1.6em;
+    }
+  
+    /* Adjust Bomb Animation on Mobile */
+    #bomb-animation {
+      width: 50px; /* Make bomb smaller on mobile */
+    }
+  }
+  
+  
+  
